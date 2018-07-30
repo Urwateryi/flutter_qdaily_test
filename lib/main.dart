@@ -26,9 +26,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
       appBar: AppBar(
         title: Text("home"),
       ),
@@ -46,14 +50,44 @@ class _MyHomePageState extends State<MyHomePage> {
         alignment: Alignment.bottomLeft,
         margin: EdgeInsets.only(left: 40.0,bottom: 10.0),
         child: FloatingActionButton(
-          onPressed: (){},
+          onPressed: (){
+            showMenuSheet(context);
+          },
           child: Image(image: AssetImage("assets/images/ic_more.png")),
         ),
       ),
     );
   }
 
-  showMenuSheet(){
-
+  showMenuSheet(BuildContext context){
+    _scaffoldKey.currentState.showBottomSheet(//有反应
+          (context) {
+        return Container(
+          child: Padding(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                ListTile(
+                  leading: Icon(Icons.monetization_on),
+                  title: Text("赞赏"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.comment),
+                  title: Text("评论"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.favorite_border),
+                  title: Text("喜欢"),
+                ),
+                ListTile(
+                  leading: Icon(Icons.share),
+                  title: Text("分享"),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 }
