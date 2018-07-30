@@ -26,16 +26,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(
-        title: Text("home"),
-      ),
+      appBar: TabBar(tabs: [
+        Text("NEWS"),
+        Text("LABS"),
+      ]),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -48,9 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       floatingActionButton: Container(
         alignment: Alignment.bottomLeft,
-        margin: EdgeInsets.only(left: 40.0,bottom: 10.0),
+        margin: EdgeInsets.only(left: 40.0, bottom: 10.0),
         child: FloatingActionButton(
-          onPressed: (){
+          onPressed: () {
             showMenuSheet(context);
           },
           child: Image(image: AssetImage("assets/images/ic_more.png")),
@@ -59,9 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  showMenuSheet(BuildContext context){
-    _scaffoldKey.currentState.showBottomSheet(//有反应
-          (context) {
+  showMenuSheet(BuildContext context) {
+    _scaffoldKey.currentState.showBottomSheet(
+      (context) {
         return Container(
           child: Padding(
             padding: EdgeInsets.all(10.0),
