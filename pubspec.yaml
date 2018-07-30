@@ -32,6 +32,46 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
+  assets:
+      - assets/images/ic_ad.png
+      - assets/images/ic_back.png
+      - assets/images/ic_back_black.png
+      - assets/images/ic_close_black.png
+      - assets/images/ic_comment.png
+      - assets/images/ic_comment_normal.png
+      - assets/images/ic_comment_press.png
+      - assets/images/ic_favor.png
+      - assets/images/ic_favor_normal.png
+      - assets/images/ic_favor_press.png
+      - assets/images/ic_lab_join.png
+      - assets/images/ic_lab_new.png
+      - assets/images/ic_login.png
+      - assets/images/ic_menu_about.png
+      - assets/images/ic_menu_category.png
+      - assets/images/ic_menu_close_x.png
+      - assets/images/ic_menu_column.png
+      - assets/images/ic_menu_home.png
+      - assets/images/ic_menu_lab.png
+      - assets/images/ic_menu_msg.png
+      - assets/images/ic_menu_night_state.png
+      - assets/images/ic_menu_offline.png
+      - assets/images/ic_menu_recomend.png
+      - assets/images/ic_menu_setting.png
+      - assets/images/ic_menu_usercenter.png
+      - assets/images/ic_more.png
+      - assets/images/ic_net_error.png
+      - assets/images/ic_new.png
+      - assets/images/ic_night_state.png
+      - assets/images/ic_no_data.png
+      - assets/images/ic_not_favor.png
+      - assets/images/ic_offline.png
+      - assets/images/ic_praise_normal.png
+      - assets/images/ic_praise_press.png
+      - assets/images/ic_recomend.png
+      - assets/images/ic_setting.png
+      - assets/images/ic_share.png
+      - assets/images/ic_share_normal.png
+      - assets/images/ic_share_press.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
