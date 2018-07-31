@@ -72,6 +72,7 @@ flutter:
       - assets/images/ic_share.png
       - assets/images/ic_share_normal.png
       - assets/images/ic_share_press.png
+      - assets/images/ic_close_no_shadow.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

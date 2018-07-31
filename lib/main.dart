@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'constant/colors.dart';
+import 'News/NewsPage.dart';
+import 'labs/LabsPage.dart';
+import 'utils/PageUtil.dart';
+import 'menu/MenuPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,79 +19,63 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: defaultTheme,
-      home: MyHomePage(),
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class HomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+class _HomePageState extends State<HomePage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      key: _scaffoldKey,
-      appBar: TabBar(tabs: [
-        Text("NEWS"),
-        Text("LABS"),
-      ]),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'test',
-            )
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        key: _scaffoldKey,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          title: TabBar(
+            tabs: [
+              Tab(text: "NEWS"),
+              Tab(text: "LABS"),
+            ],
+            indicatorColor: AppColors.colorPrimary,
+            labelColor: Colors.black,
+            unselectedLabelColor: Colors.grey[400],
+            indicatorSize: TabBarIndicatorSize.label,
+          ),
+        ),
+        body: TabBarView(
+          children: [
+            NewsPage(),
+            LabsPage(),
           ],
         ),
+        floatingActionButton: floatButton(context),
       ),
-      floatingActionButton: Container(
-        alignment: Alignment.bottomLeft,
-        margin: EdgeInsets.only(left: 40.0, bottom: 10.0),
+    );
+  }
+
+  Widget floatButton(BuildContext context) {
+    return Container(
+      alignment: Alignment.bottomLeft,
+      margin: EdgeInsets.only(left: 40.0, bottom: 10.0),
+      child: SizedBox(
+        width: 45.0,
+        height: 45.0,
         child: FloatingActionButton(
           onPressed: () {
-            showMenuSheet(context);
+            PageUtil.pushTo(context, MenuPage());
           },
           child: Image(image: AssetImage("assets/images/ic_more.png")),
         ),
       ),
-    );
-  }
-
-  showMenuSheet(BuildContext context) {
-    _scaffoldKey.currentState.showBottomSheet(
-      (context) {
-        return Container(
-          child: Padding(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.monetization_on),
-                  title: Text("赞赏"),
-                ),
-                ListTile(
-                  leading: Icon(Icons.comment),
-                  title: Text("评论"),
-                ),
-                ListTile(
-                  leading: Icon(Icons.favorite_border),
-                  title: Text("喜欢"),
-                ),
-                ListTile(
-                  leading: Icon(Icons.share),
-                  title: Text("分享"),
-                ),
-              ],
-            ),
-          ),
-        );
-      },
     );
   }
 }
