@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_qdaily_test/utils/PageUtil.dart';
+import 'aboutus/AboutUsPage.dart';
 
 class MenuPage extends StatefulWidget {
   @override
@@ -134,6 +136,9 @@ class _MenuState extends State<MenuPage> {
                       height: 28.0,
                     ),
                     title: Text("关于我们", style: TextStyle(fontSize: 15.0)),
+                    onTap: (){
+                      PageUtil.pushTo(context, AboutUsPage());
+                    },
                   ),
                   ListTile(
                     leading: Image(

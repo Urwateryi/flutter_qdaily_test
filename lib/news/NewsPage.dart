@@ -55,7 +55,7 @@ class NewsPage extends StatelessWidget {
         loop: true,
         duration: 1000,
         onIndexChanged: (index) {
-          print("这是第" + (index + 1).toString() + "张照片");
+
         },
       ),
     );
