@@ -67,8 +67,8 @@ class _HomePageState extends State<HomePage> {
       alignment: Alignment.bottomLeft,
       margin: EdgeInsets.only(left: 40.0, bottom: 10.0),
       child: SizedBox(
-        width: 45.0,
-        height: 45.0,
+        width: 40.0,
+        height: 40.0,
         child: FloatingActionButton(
           onPressed: () {
             PageUtil.pushTo(context, MenuPage());
