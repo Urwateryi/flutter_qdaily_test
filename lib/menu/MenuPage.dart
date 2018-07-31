@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 class MenuPage extends StatefulWidget {
   @override
-  State<MenuPage> createState() => MenuState();
+  _MenuState createState() => _MenuState();
 }
 
-class MenuState extends State<MenuPage> {
+class _MenuState extends State<MenuPage> {
   Widget seachButton(BuildContext context) {
     return SizedBox(
       width: 310.0,
