@@ -75,6 +75,7 @@ flutter:
       - assets/images/ic_share.png
       - assets/images/ic_close_no_shadow.png
       - assets/images/ic_search.png
+      - assets/images/ic_add.png
 
       - assets/images/illustration_1.jpg
       - assets/images/illustration_2.jpg
