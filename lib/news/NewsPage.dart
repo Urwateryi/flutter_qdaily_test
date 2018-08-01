@@ -1,17 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:transparent_image/transparent_image.dart';
+
 import 'package:flutter_qdaily_test/datas/BannersData.dart';
 import 'package:flutter_qdaily_test/datas/FeedsData.dart';
 import 'package:flutter_qdaily_test/datas/FeedsAdData.dart';
+
 import 'package:flutter_qdaily_test/model/BannerDto.dart';
 import 'package:flutter_qdaily_test/model/FeedDto.dart';
 import 'package:flutter_qdaily_test/model/FeedsAdDto.dart';
+import 'package:flutter_qdaily_test/model/ColumnDto.dart';
+
 import 'items/FeedsPostItemType1.dart';
 import 'items/FeedsPostItemType0.dart';
 import 'items/FeedsPostItemType2.dart';
 import 'items/FeedsAdItem.dart';
-import 'package:transparent_image/transparent_image.dart';
+import 'items/ColumnItem.dart';
 
 class NewsPage extends StatelessWidget {
   final List<BannerDto> bannerList = BannersData.bannerList;
