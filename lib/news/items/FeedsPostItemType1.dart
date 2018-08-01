@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_qdaily_test/model/FeedDto.dart';
 import 'package:flutter_qdaily_test/model/PostDto.dart';
+import 'package:flutter_qdaily_test/common/CommentFavorWidget.dart';
 
 class FeedsPostItemType1 extends StatefulWidget {
   final FeedDto dto;
@@ -42,54 +43,7 @@ class _FeedsPostItemType1State extends State<FeedsPostItemType1> {
                       ),
                     ),
                     SizedBox(height: 10.0),
-                    Row(
-                      children: <Widget>[
-                        Text(
-                          post.category.title,
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 12.0,
-                          ),
-                        ),
-                        SizedBox(width: 8.0),
-                        Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.comment,
-                              size: 13.0,
-                              color: Colors.grey,
-                            ),
-                            SizedBox(width: 5.0),
-                            Text(
-                              post.commentCount.toString(),
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 12.0),
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 8.0),
-                        Row(
-                          children: <Widget>[
-                            Icon(
-                              Icons.favorite_border,
-                              color: Colors.grey,
-                              size: 13.0,
-                            ),
-                            SizedBox(width: 5.0),
-                            Text(
-                              post.praiseCount.toString(),
-                              style:
-                                  TextStyle(color: Colors.grey, fontSize: 12.0),
-                            ),
-                          ],
-                        ),
-                        SizedBox(width: 8.0),
-                        Text(
-                          "1个小时前",
-                          style: TextStyle(color: Colors.grey, fontSize: 12.0),
-                        ),
-                      ],
-                    ),
+                    CommentFavorWidget(post),
                   ],
                 ),
               ),

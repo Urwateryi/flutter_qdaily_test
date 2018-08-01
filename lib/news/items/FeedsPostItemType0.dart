@@ -3,6 +3,8 @@ import 'package:flutter_qdaily_test/model/FeedDto.dart';
 import 'package:flutter_qdaily_test/model/PostDto.dart';
 import 'package:flutter_qdaily_test/model/ColumnDto.dart';
 import 'package:flutter_qdaily_test/model/CategoryDto.dart';
+import 'package:flutter_qdaily_test/common/CommentFavorWidget.dart';
+import 'package:flutter_qdaily_test/common/RowTabWidget.dart';
 
 class FeedsPostItemType0 extends StatefulWidget {
   final FeedDto dto;
@@ -29,29 +31,7 @@ class _FeedsPostItemType0State extends State<FeedsPostItemType0> {
         ),
         Column(
           children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Row(
-                children: <Widget>[
-                  CircleAvatar(
-                    backgroundImage: NetworkImage(columnDto.icon),
-                    radius: 12.0,
-                  ),
-                  SizedBox(width: 10.0),
-                  Expanded(
-                      child: Text(columnDto.name,
-                          style: TextStyle(
-                              color: Colors.black,
-                              fontSize: 15.0,
-                              fontWeight: FontWeight.bold))),
-                  Image(
-                    image: AssetImage("assets/images/ic_share.png"),
-                    width: 28.0,
-                    height: 25.0,
-                  )
-                ],
-              ),
-            ),
+            RowTabWidget(columnDto),
             Stack(
               fit: StackFit.passthrough,
               children: <Widget>[
@@ -109,54 +89,7 @@ class _FeedsPostItemType0State extends State<FeedsPostItemType0> {
                     ),
                   ),
                   SizedBox(height: 10.0),
-                  Row(
-                    children: <Widget>[
-                      Text(
-                        postDto.category.title,
-                        style: TextStyle(
-                          color: Colors.grey,
-                          fontSize: 12.0,
-                        ),
-                      ),
-                      SizedBox(width: 8.0),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.comment,
-                            size: 13.0,
-                            color: Colors.grey,
-                          ),
-                          SizedBox(width: 5.0),
-                          Text(
-                            postDto.commentCount.toString(),
-                            style:
-                                TextStyle(color: Colors.grey, fontSize: 12.0),
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: 8.0),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            Icons.favorite_border,
-                            color: Colors.grey,
-                            size: 13.0,
-                          ),
-                          SizedBox(width: 5.0),
-                          Text(
-                            postDto.praiseCount.toString(),
-                            style:
-                                TextStyle(color: Colors.grey, fontSize: 12.0),
-                          ),
-                        ],
-                      ),
-                      SizedBox(width: 8.0),
-                      Text(
-                        "1个小时前",
-                        style: TextStyle(color: Colors.grey, fontSize: 12.0),
-                      ),
-                    ],
-                  ),
+                  CommentFavorWidget(postDto),
                 ],
               ),
               padding: EdgeInsets.all(10.0),
