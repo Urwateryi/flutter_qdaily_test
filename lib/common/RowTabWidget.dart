@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_qdaily_test/model/ColumnDto.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class RowTabWidget extends StatefulWidget {
 
@@ -20,9 +21,17 @@ class _RowTabWidgetState extends State<RowTabWidget> {
       padding: EdgeInsets.all(10.0),
       child: Row(
         children: <Widget>[
-          CircleAvatar(
-            backgroundImage: NetworkImage(columnDto.icon),
-            radius: 12.0,
+          Material(
+            child: FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage,
+              image: columnDto.icon,
+              fit: BoxFit.cover,
+              width: 28.0,
+              height: 28.0,
+              fadeInDuration: Duration(milliseconds: 200),
+              fadeOutDuration: Duration(milliseconds: 200),
+            ),
+            borderRadius: BorderRadius.circular(14.0),
           ),
           SizedBox(width: 10.0),
           Expanded(

@@ -11,6 +11,7 @@ import 'items/FeedsPostItemType1.dart';
 import 'items/FeedsPostItemType0.dart';
 import 'items/FeedsPostItemType2.dart';
 import 'items/FeedsAdItem.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class NewsPage extends StatelessWidget {
   final List<BannerDto> bannerList = BannersData.bannerList;
@@ -26,9 +27,12 @@ class NewsPage extends StatelessWidget {
           return Stack(
             fit: StackFit.expand,
             children: <Widget>[
-              Image(
-                image: NetworkImage(dto.image),
+              FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage,
+                image: dto.image,
                 fit: BoxFit.cover,
+                fadeInDuration: Duration(milliseconds: 100),
+                fadeOutDuration: Duration(milliseconds: 100),
               ),
               Container(
                 alignment: Alignment.bottomCenter,
@@ -66,9 +70,8 @@ class NewsPage extends StatelessWidget {
   }
 
   Widget feedsWidget() {
-
     //广告位
-    var locations=[];
+    var locations = [];
     if (adsList != null && adsList.length > 0) {
       for (int i = 0; i < adsList.length; i++) {
         FeedsAdDto feedsAdDto = adsList[i];
@@ -86,9 +89,9 @@ class NewsPage extends StatelessWidget {
             return banner(context);
           } else {
             //广告位插入
-            if(locations.length>0){
-              if(position==locations[0]){
-                return FeedsAdItem(adsList[position-1]);
+            if (locations.length > 0) {
+              if (position == locations[0]) {
+                return FeedsAdItem(adsList[position - 1]);
               }
             }
 

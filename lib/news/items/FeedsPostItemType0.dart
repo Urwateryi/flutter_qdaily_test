@@ -5,6 +5,7 @@ import 'package:flutter_qdaily_test/model/ColumnDto.dart';
 import 'package:flutter_qdaily_test/model/CategoryDto.dart';
 import 'package:flutter_qdaily_test/common/CommentFavorWidget.dart';
 import 'package:flutter_qdaily_test/common/RowTabWidget.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class FeedsPostItemType0 extends StatefulWidget {
   final FeedDto dto;
@@ -35,10 +36,14 @@ class _FeedsPostItemType0State extends State<FeedsPostItemType0> {
             Stack(
               fit: StackFit.passthrough,
               children: <Widget>[
-                Image(
-                    image: NetworkImage(postDto.image),
-                    height: 200.0,
-                    fit: BoxFit.cover),
+                FadeInImage.memoryNetwork(
+                  placeholder: kTransparentImage,
+                  image: postDto.image,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                  fadeInDuration: Duration(milliseconds: 500),
+                  fadeOutDuration: Duration(milliseconds: 500),
+                ),
                 Positioned(
                   top: 15.0,
                   right: 15.0,

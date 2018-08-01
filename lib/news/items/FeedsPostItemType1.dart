@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_qdaily_test/model/FeedDto.dart';
 import 'package:flutter_qdaily_test/model/PostDto.dart';
 import 'package:flutter_qdaily_test/common/CommentFavorWidget.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class FeedsPostItemType1 extends StatefulWidget {
   final FeedDto dto;
@@ -48,11 +49,14 @@ class _FeedsPostItemType1State extends State<FeedsPostItemType1> {
                 ),
               ),
             ),
-            Image(
-              image: NetworkImage(post.image),
-              fit: BoxFit.cover,
+            FadeInImage.memoryNetwork(
+              placeholder: kTransparentImage,
+              image: post.image,
               width: 150.0,
               height: 110.0,
+              fit: BoxFit.cover,
+              fadeInDuration: Duration(milliseconds: 500),
+              fadeOutDuration: Duration(milliseconds: 500),
             ),
           ],
         )
