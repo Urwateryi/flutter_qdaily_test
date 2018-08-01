@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_qdaily_test/model/ColumnDto.dart';
 import 'package:transparent_image/transparent_image.dart';
 
-class RowTabWidget extends StatefulWidget {
+class FeedsRowTabWidget extends StatefulWidget {
 
   final ColumnDto dto;
-  RowTabWidget(this.dto);
+  FeedsRowTabWidget(this.dto);
 
   @override
-  _RowTabWidgetState createState() => _RowTabWidgetState();
+  _FeedsRowTabWidgetState createState() => _FeedsRowTabWidgetState();
 }
 
-class _RowTabWidgetState extends State<RowTabWidget> {
+class _FeedsRowTabWidgetState extends State<FeedsRowTabWidget> {
   @override
   Widget build(BuildContext context) {
 

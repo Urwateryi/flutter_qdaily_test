@@ -4,7 +4,7 @@ import 'package:flutter_qdaily_test/model/PostDto.dart';
 import 'package:flutter_qdaily_test/model/ColumnDto.dart';
 import 'package:flutter_qdaily_test/model/CategoryDto.dart';
 import 'package:flutter_qdaily_test/common/CommentFavorWidget.dart';
-import 'package:flutter_qdaily_test/common/RowTabWidget.dart';
+import 'package:flutter_qdaily_test/common/FeedsRowTabWidget.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class FeedsPostItemType0 extends StatefulWidget {
@@ -32,7 +32,7 @@ class _FeedsPostItemType0State extends State<FeedsPostItemType0> {
         ),
         Column(
           children: <Widget>[
-            RowTabWidget(columnDto),
+            FeedsRowTabWidget(columnDto),
             Stack(
               fit: StackFit.passthrough,
               children: <Widget>[
