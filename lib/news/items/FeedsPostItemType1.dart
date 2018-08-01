@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_qdaily_test/model/FeedDto.dart';
 import 'package:flutter_qdaily_test/model/PostDto.dart';
 
-class FeedsItem extends StatefulWidget {
+class FeedsPostItemType1 extends StatefulWidget {
   final FeedDto dto;
 
-  FeedsItem(this.dto);
+  FeedsPostItemType1(this.dto);
 
   @override
-  _FeedsItemState createState() => _FeedsItemState();
+  _FeedsPostItemType1State createState() => _FeedsPostItemType1State();
 }
 
-class _FeedsItemState extends State<FeedsItem> {
+class _FeedsPostItemType1State extends State<FeedsPostItemType1> {
   @override
   Widget build(BuildContext context) {
     PostDto post = widget.dto.post;
@@ -31,7 +31,7 @@ class _FeedsItemState extends State<FeedsItem> {
                   children: <Widget>[
                     Text(
                       post.title,
-                      maxLines: 3,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         color: Colors.black,

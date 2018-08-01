@@ -1,6 +1,8 @@
 import 'package:flutter_qdaily_test/model/FeedDto.dart';
 import 'package:flutter_qdaily_test/model/PostDto.dart';
 import 'package:flutter_qdaily_test/model/CategoryDto.dart';
+import 'package:flutter_qdaily_test/model/ColumnDto.dart';
+import 'package:flutter_qdaily_test/model/ShareDto.dart';
 
 class FeedsData {
   static List<FeedDto> feedsList = <FeedDto>[
@@ -65,6 +67,58 @@ class FeedsData {
           null),
     ),
     FeedDto(
+      "http://img.qdaily.com/paper/paper_show/20180718122335JQ76Txb3CYFsGO0f.jpg?imageMogr2/auto-orient/thumbnail/!1030x430r/gravity/Center/crop/1030x430/quality/85/format/jpg/ignore-error/1",
+      0,
+      PostDto(
+        2477,
+        1000,
+        "如今线上交流的时候，你都是怎么表达强烈情绪的？",
+        "“哈哈已经不是笑了，连续七个哈才能证明我的快乐。”（题图来自：istock © jossdim）",
+        1533056400,
+        "http://img.qdaily.com/paper/paper_show/20180718122335JQ76Txb3CYFsGO0f.jpg?imageMogr2/auto-orient/thumbnail/!1030x430r/gravity/Center/crop/1030x430/quality/85/format/jpg/ignore-error/1",
+        0,
+        1,
+        true,
+        8,
+        "",
+        0,
+        57812,
+        "http://app3.qdaily.com/app3/articles/55779.html",
+        "",
+        "paper",
+        CategoryDto(
+          1,
+          "投票",
+          "http://img.qdaily.com/category/icon_black/20160606004531Fg254UJbRaLqOmvY.png?imageMogr2/auto-orient/thumbnail/!128x128r/gravity/Center/crop/128x128/quality/85/ignore-error/1",
+          "http://img.qdaily.com/category/icon_yellow_app/20160606004532NrgPYnKo3UXRaw1i.png?imageMogr2/auto-orient/thumbnail/!160x160r/gravity/Center/crop/160x160/quality/85/ignore-error/1",
+          "http://img.qdaily.com/paper_category/icon_white/20160722174257B2WUkThIMQqz10YS.png?imageMogr2/auto-orient/thumbnail/108x110/gravity/Center/crop/108x110/quality/85/ignore-error/1",
+          "",
+        ),
+        ColumnDto(
+          2,
+          "好奇心研究所",
+          "",
+          false,
+          "http://img.qdaily.com/special_column/icon/20160703130142yvY2Z1xFor43fEns.png?imageMogr2/auto-orient/thumbnail/!128x128r/gravity/Center/crop/128x128/quality/85/format/jpg/ignore-error/1",
+          "http://img.qdaily.com/special_column/column/201607031301437lkjRDyoGULAJcM1.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/gravity/Center/crop/320x320/quality/85/format/jpg/ignore-error/1",
+          "http://img.qdaily.com/special_column/column/201607031301437lkjRDyoGULAJcM1.jpg?imageMogr2/auto-orient/thumbnail/!750x604r/gravity/Center/crop/750x604/quality/85/format/jpg/ignore-error/1",
+          "好奇心日报",
+          0,
+          0,
+          0,
+          2253,
+          "2018-08-01 01:00:12 +0800",
+          "special_columns_2",
+          null,
+          ShareDto(
+              "http://m.qdaily.com/mobile/special_columns/2.html",
+              "好奇心研究所_好奇心日报",
+              "好奇心研究所",
+              "http://img.qdaily.com/special_column/column/201607031301437lkjRDyoGULAJcM1.jpg?imageMogr2/auto-orient/thumbnail/!320x320r/gravity/Center/crop/320x320/quality/85/format/jpg/ignore-error/1"),
+        ),
+      ),
+    ),
+    FeedDto(
       "http://img.qdaily.com/article/article_show/20180731135007sD0TxkqCImGvf6rj.png?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1",
       1,
       PostDto(
@@ -95,23 +149,23 @@ class FeedsData {
           null),
     ),
     FeedDto(
-      "http://img.qdaily.com/article/banner/20180727144525AnVNadPpWKFl5RQt.JPG?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1",
+      "http://img.qdaily.com/article/banner/20180801070413rNqYWeRvDExiSHAj.jpg?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1",
       2,
       PostDto(
-          55670,
+          55808,
           1,
-          "伟大工程胡佛大坝面临改造，这个价值 30 亿美元的计划有何挑战？",
-          "怎样实惠又有效地存储电力？这已经被看作改变能源行业、帮助减少碳排放的关键所在。",
-          1532993095,
-          "http://img.qdaily.com/article/banner/20180727144525AnVNadPpWKFl5RQt.JPG?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1",
+          "尽管女演员实名指控吕克·贝松强奸，法国影坛却反响寥寥",
+          "在法国文化的影响下，模糊了调情和性侵行为之间界限的男性也使得女性陷入迷茫——她们不确定自己究竟应该容忍什么尺度的行为。",
+          1533078297,
+          "http://img.qdaily.com/article/banner/20180801070413rNqYWeRvDExiSHAj.jpg?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1",
           0,
-          9,
+          26,
           true,
-          51,
+          31,
           "",
           0,
-          58143,
-          "http://app3.qdaily.com/app3/articles/55670.html",
+          58290,
+          "http://app3.qdaily.com/app3/articles/55808.html",
           "",
           "article",
           CategoryDto(

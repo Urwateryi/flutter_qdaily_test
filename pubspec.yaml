@@ -72,8 +72,6 @@ flutter:
       - assets/images/ic_recomend.png
       - assets/images/ic_setting.png
       - assets/images/ic_share.png
-      - assets/images/ic_share_normal.png
-      - assets/images/ic_share_press.png
       - assets/images/ic_close_no_shadow.png
       - assets/images/ic_search.png
 

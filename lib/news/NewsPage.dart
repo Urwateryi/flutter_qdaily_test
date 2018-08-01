@@ -5,7 +5,9 @@ import 'package:flutter_qdaily_test/datas/BannersData.dart';
 import 'package:flutter_qdaily_test/model/BannerDto.dart';
 import 'package:flutter_qdaily_test/datas/FeedsData.dart';
 import 'package:flutter_qdaily_test/model/FeedDto.dart';
-import 'items/FeedsItem.dart';
+import 'items/FeedsPostItemType1.dart';
+import 'items/FeedsPostItemType0.dart';
+import 'items/FeedsPostItemType2.dart';
 
 class NewsPage extends StatelessWidget {
   final List<BannerDto> bannerList = BannersData.bannerList;
@@ -54,24 +56,28 @@ class NewsPage extends StatelessWidget {
         autoplay: true,
         loop: true,
         duration: 1000,
-        onIndexChanged: (index) {
-
-        },
+        onIndexChanged: (index) {},
       ),
     );
   }
 
-  //由于滚动控件中，嵌套滚动控件，会找不到高度，所以以下是两种解决办法
-  //方法一
   Widget feedsWidget() {
     return Expanded(
       child: ListView.builder(
-        itemCount: feedsList.length+1,
+        itemCount: feedsList.length + 1,
         itemBuilder: (context, position) {
-          if(position==0){
+          if (position == 0) {
             return banner(context);
+          } else {
+            FeedDto feedDto = feedsList[position-1];
+            if (feedDto.type == 0) {
+              return FeedsPostItemType0(feedsList[position-1]);
+            }else if(feedDto.type==1){
+              return FeedsPostItemType1(feedsList[position - 1]);
+            }else if(feedDto.type==2){
+              return FeedsPostItemType2(feedsList[position - 1]);
+            }
           }
-          return FeedsItem(feedsList[position-1]);
         },
       ),
     );
@@ -87,31 +93,4 @@ class NewsPage extends StatelessWidget {
       ),
     );
   }
-
-  //方法二
-//  Widget feedsWidget() {
-//    return SizedBox(
-//      height: 1000.0,
-//      child: ListView.builder(
-//        physics: ClampingScrollPhysics(),
-//        itemCount: feedsList.length,
-//        itemBuilder: (context, position) {
-//          return FeedsItem(feedsList[position]);
-//        },
-//      ),
-//    );
-//  }
-//
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      body: ListView(
-//        physics: ClampingScrollPhysics(),
-//        children: <Widget>[
-//          banner(context),
-//          feedsWidget(),
-//        ],
-//      ),
-//    );
-//  }
 }
