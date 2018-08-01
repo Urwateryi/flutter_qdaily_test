@@ -7,7 +7,7 @@ class AdvertisementDto {
   int titleReveal;
   String adIconUrl;
   int wifiLocation;
-  int appType;
+  String appType;
   bool macroReplaceStatus;
 
   AdvertisementDto(this.feedbackUrl, this.ownFeedbackUrl, this.adLocation,

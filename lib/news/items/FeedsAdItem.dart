@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_qdaily_test/model/FeedsAdDto.dart';
 import 'package:flutter_qdaily_test/model/PostDto.dart';
+import 'package:flutter_qdaily_test/model/FeedsAdDto.dart';
 
 class FeedsAdItem extends StatefulWidget {
+  final FeedsAdDto dto;
+
+  FeedsAdItem(this.dto);
 
   @override
   _FeedsAdItemState createState() => _FeedsAdItemState();
@@ -11,6 +14,7 @@ class FeedsAdItem extends StatefulWidget {
 class _FeedsAdItemState extends State<FeedsAdItem> {
   @override
   Widget build(BuildContext context) {
+    PostDto post = widget.dto.post;
 
     return Column(
       children: <Widget>[
@@ -26,8 +30,8 @@ class _FeedsAdItemState extends State<FeedsAdItem> {
                 child: Column(
                   children: <Widget>[
                     Text(
-                      "",
-                      maxLines: 3,
+                      post.title,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(
                         color: Colors.black,
@@ -41,7 +45,7 @@ class _FeedsAdItemState extends State<FeedsAdItem> {
                     Row(
                       children: <Widget>[
                         Text(
-                          "",
+                          post.category.title,
                           style: TextStyle(
                             color: Colors.grey,
                             fontSize: 12.0,
@@ -57,9 +61,9 @@ class _FeedsAdItemState extends State<FeedsAdItem> {
                             ),
                             SizedBox(width: 5.0),
                             Text(
-                              "",
+                              post.commentCount.toString(),
                               style:
-                              TextStyle(color: Colors.grey, fontSize: 12.0),
+                                  TextStyle(color: Colors.grey, fontSize: 12.0),
                             ),
                           ],
                         ),
@@ -73,9 +77,9 @@ class _FeedsAdItemState extends State<FeedsAdItem> {
                             ),
                             SizedBox(width: 5.0),
                             Text(
-                              "",
+                              post.praiseCount.toString(),
                               style:
-                              TextStyle(color: Colors.grey, fontSize: 12.0),
+                                  TextStyle(color: Colors.grey, fontSize: 12.0),
                             ),
                           ],
                         ),
@@ -91,7 +95,7 @@ class _FeedsAdItemState extends State<FeedsAdItem> {
               ),
             ),
             Image(
-              image: NetworkImage(""),
+              image: NetworkImage(post.image),
               fit: BoxFit.cover,
               width: 150.0,
               height: 110.0,
