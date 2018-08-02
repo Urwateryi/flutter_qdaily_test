@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'constant/colors.dart';
-import 'News/NewsPage.dart';
+import 'news/NewsPage.dart';
 import 'labs/LabsPage.dart';
 import 'utils/PageUtil.dart';
 import 'menu/MenuPage.dart';
+import 'news/NewsPage1.dart';
 
 void main() => runApp(MyApp());
 
@@ -53,7 +54,7 @@ class _HomePageState extends State<HomePage> {
         ),
         body: TabBarView(
           children: [
-            NewsPage(),
+            NewsPage1(),
             LabsPage(),
           ],
         ),

@@ -24,42 +24,45 @@ class _FeedsPostItemType1State extends State<FeedsPostItemType1> {
           height: 5.0,
           color: Colors.grey[100],
         ),
-        Row(
-          children: <Widget>[
-            Expanded(
-              child: Container(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
-                  children: <Widget>[
-                    Text(
-                      post.title,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.bold,
-                        height: 1.3,
-                        letterSpacing: 1.3,
+        Container(
+          color: Colors.white,
+          child: Row(
+            children: <Widget>[
+              Expanded(
+                child: Container(
+                  padding: EdgeInsets.all(10.0),
+                  child: Column(
+                    children: <Widget>[
+                      Text(
+                        post.title,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.bold,
+                          height: 1.3,
+                          letterSpacing: 1.3,
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 10.0),
-                    CommentFavorWidget(post),
-                  ],
+                      SizedBox(height: 10.0),
+                      CommentFavorWidget(post),
+                    ],
+                  ),
                 ),
               ),
-            ),
-            FadeInImage.memoryNetwork(
-              placeholder: kTransparentImage,
-              image: post.image,
-              width: 150.0,
-              height: 110.0,
-              fit: BoxFit.cover,
-              fadeInDuration: Duration(milliseconds: 500),
-              fadeOutDuration: Duration(milliseconds: 500),
-            ),
-          ],
-        )
+              FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage,
+                image: post.image,
+                width: 150.0,
+                height: 110.0,
+                fit: BoxFit.cover,
+                fadeInDuration: Duration(milliseconds: 500),
+                fadeOutDuration: Duration(milliseconds: 500),
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }

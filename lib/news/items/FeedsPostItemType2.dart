@@ -36,6 +36,7 @@ class _FeedsPostItemType2State extends State<FeedsPostItemType2> {
               fadeOutDuration: const Duration(milliseconds: 1200),
             ),
             Container(
+              color: Colors.white,
               child: Column(
                 children: <Widget>[
                   Text(

@@ -9,13 +9,13 @@ class ColumnDto{
   String image;
   String imageLarge;
   String contentProvider;
-  int showType;
+  int showType;//1为大的，2为小的
   int genre;
   int subscriberNum;
   int postCount;
   String sortTime;
   String columnTag;
-  String location;
+  int location;
   ShareDto share;
 
   ColumnDto(this.id, this.name, this.description, this.subscribeStatus,
