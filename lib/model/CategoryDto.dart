@@ -1,4 +1,6 @@
-class CategoryDto{
+import 'BaseDto.dart';
+
+class CategoryDto implements BaseDto{
   int id;
   String title;
   String normal;

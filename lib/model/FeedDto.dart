@@ -1,6 +1,7 @@
 import 'PostDto.dart';
+import 'BaseDto.dart';
 
-class FeedDto{
+class FeedDto implements BaseDto{
   String image;
   int type;
   PostDto post;

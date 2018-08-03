@@ -1,4 +1,6 @@
-class ShareDto{
+import 'BaseDto.dart';
+
+class ShareDto implements BaseDto{
   String url;
   String title;
   String text;

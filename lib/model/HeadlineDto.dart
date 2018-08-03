@@ -1,7 +1,8 @@
 import 'PostDto.dart';
 import 'ListDto.dart';
+import 'BaseDto.dart';
 
-class HeadlineDto{
+class HeadlineDto implements BaseDto{
   String image;
   int type;
   PostDto post;

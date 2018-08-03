@@ -1,6 +1,7 @@
 import 'ShareDto.dart';
+import 'BaseDto.dart';
 
-class ColumnDto{
+class ColumnDto implements BaseDto{
   int id;
   String name;
   String description;

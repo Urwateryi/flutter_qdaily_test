@@ -4,7 +4,7 @@ import 'package:flutter_qdaily_test/model/CategoryDto.dart';
 import 'package:flutter_qdaily_test/model/ColumnDto.dart';
 import 'package:flutter_qdaily_test/model/ShareDto.dart';
 
-class BannersData {
+class BannersData{
  static List<BannerDto> bannerList = <BannerDto>[
     BannerDto(
       "http://img.qdaily.com/article/banner/20180731021509A96X2gTRZoUK3wax.jpg?imageMogr2/auto-orient/thumbnail/!640x380r/gravity/Center/crop/640x380/quality/85/format/jpg/ignore-error/1",

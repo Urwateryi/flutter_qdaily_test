@@ -1,8 +1,9 @@
 import 'PostDto.dart';
 import 'AdvertisementDto.dart';
 import 'CoverDto.dart';
+import 'BaseDto.dart';
 
-class FeedsAdDto{
+class FeedsAdDto implements BaseDto{
   String image;
   int type;
   PostDto post;

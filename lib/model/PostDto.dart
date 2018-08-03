@@ -1,7 +1,8 @@
 import 'CategoryDto.dart';
 import 'ColumnDto.dart';
+import 'BaseDto.dart';
 
-class PostDto{
+class PostDto implements BaseDto{
     int id;
     int genre;
     String title;

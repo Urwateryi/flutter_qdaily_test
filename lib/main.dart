@@ -5,6 +5,7 @@ import 'labs/LabsPage.dart';
 import 'utils/PageUtil.dart';
 import 'menu/MenuPage.dart';
 import 'news/NewsPage1.dart';
+import 'news/MultiItemPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -54,7 +55,7 @@ class _HomePageState extends State<HomePage> {
         ),
         body: TabBarView(
           children: [
-            NewsPage1(),
+            MultiItemPage(),
             LabsPage(),
           ],
         ),

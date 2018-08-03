@@ -1,4 +1,6 @@
-class AdvertisementDto {
+import 'BaseDto.dart';
+
+class AdvertisementDto implements BaseDto{
   String feedbackUrl;
   String ownFeedbackUrl;
   int adLocation;

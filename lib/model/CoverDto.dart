@@ -1,4 +1,6 @@
-class CoverDto{
+import 'BaseDto.dart';
+
+class CoverDto implements BaseDto{
   String image;
   String title;
 
